@@ -1,0 +1,102 @@
+
+* {
+    box-sizing: border-box;
+}
+/* Тело */
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c6c6c6;
+    font-family: Arial, sans-serif;
+}
+/* Контейнер */
+.container {
+    width: 660px;
+    min-height: 760px;
+    background-color: #c6c6c6;
+    padding: 60px 80px 70px;
+}
+/* Поиск */
+#search-input {
+    display: block;
+    width: 500px;
+    height: 62px;
+    padding: 5px 13px;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: black;
+    font-size: 28px;
+}
+
+#autocomplete-list {
+    width: 500px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#autocomplete-list li {
+    height: 44px;
+    padding: 3px 12px;
+    border: 2px solid black;
+    border-bottom: none;
+    background-color: #e3e3e3;
+    font-size: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#autocomplete-list li:last-child {
+    border-bottom: 2px solid black;
+}
+
+#autocomplete-list li:hover {
+    background-color: #65c9f1;
+}
+/* Результат */
+#repositories-list {
+    width: 500px;
+    margin: 45px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+#repositories-list li {
+    position: relative;
+    min-height: 100px;
+    padding: 8px 80px 8px 13px;
+    border: 1px solid #333;
+    border-bottom: none;
+    background-color: #df78e5;
+    font-size: 23px;
+    line-height: 28px;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+#repositories-list li:last-child {
+    border-bottom: 1px solid #333;
+}
+
+#repositories-list button {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    color: red;
+    font-size: 55px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+#repositories-list button:hover {
+    color: darkred;
+}
